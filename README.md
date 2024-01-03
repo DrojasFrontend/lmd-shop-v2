@@ -1,1 +1,1 @@
-# lmd-shop-v2
+# LMD SHOP V2
