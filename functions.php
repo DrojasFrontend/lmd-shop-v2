@@ -1,5 +1,17 @@
 <?php
 
+define('URL_BASE', get_stylesheet_directory_uri() . '/');
+define('IMG_BASE', URL_BASE . 'assets/images/');
+
+add_theme_support( 'custom-logo' );
+
+register_nav_menus(
+  array(
+    'main-menu' => _( 'Menu principal' ),
+    'main-menu-footer' => _( 'Menu Footer' ),
+  )
+);
+
 wp_enqueue_style( 'fonts', get_template_directory_uri() . '/assets/fonts/fonts.css', false, '1.1', 'all');
 wp_enqueue_style( 'main', get_template_directory_uri() . '/assets/css/main.css', false, '1.1', 'all');
 
