@@ -19,7 +19,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<?php wp_head(); ?>
 	<title><?php wp_title('|', true, 'right'); ?></title>
-	<?php get_template_part( 'templates/parts/layout/head' ); ?>
 </head>
 
 <body>

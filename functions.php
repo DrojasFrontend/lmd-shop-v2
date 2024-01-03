@@ -1,4 +1,8 @@
 <?php
+
+wp_enqueue_style( 'fonts', get_template_directory_uri() . '/assets/fonts/fonts.css', false, '1.1', 'all');
+wp_enqueue_style( 'main', get_template_directory_uri() . '/assets/css/main.css', false, '1.1', 'all');
+
 // Remove the admin bar for non-admin users
 function remove_admin_bar() {
   if (!current_user_can('manage_options')) {
@@ -43,4 +47,20 @@ function wps_deregister_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'wps_deregister_styles', 100 );
 
+// remove dashicons
+function wpdocs_dequeue_dashicon() {
+	if (current_user_can( 'update_core' )) {
+	    return;
+	}
+	wp_deregister_style('dashicons');
+}
+add_action( 'wp_enqueue_scripts', 'wpdocs_dequeue_dashicon' );
+
+function thewpx_remove_block_library_css() {
+  wp_dequeue_style( 'wp-block-library' );
+  wp_dequeue_style( 'wp-block-library-theme' );
+  wp_dequeue_style( 'wc-block-style' );
+  wp_dequeue_style( 'storefront-gutenberg-blocks' );
+}
+add_action( 'wp_enqueue_scripts', 'thewpx_remove_block_library_css', 100 );
 ?>
