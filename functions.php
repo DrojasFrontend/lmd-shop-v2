@@ -75,4 +75,11 @@ function thewpx_remove_block_library_css() {
   wp_dequeue_style( 'storefront-gutenberg-blocks' );
 }
 add_action( 'wp_enqueue_scripts', 'thewpx_remove_block_library_css', 100 );
+
+/* ACF */
+function my_acf_json_save_point( $path ) {
+  return get_stylesheet_directory() . '/acf-json';
+}
+add_filter( 'acf/settings/save_json', 'my_acf_json_save_point' );
+
 ?>
