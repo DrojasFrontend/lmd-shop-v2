@@ -6,11 +6,13 @@
  * @since LMD Shop 1.0
  */
 
+ global $product;
+
 $queryArgs = [
   'post_type' => 'featured-product',
   'post_status' => 'publish',
   'posts_per_page' => 4,
-  'category_name' => ''
+  'category_name' => $product
 ];
 
 // SQL query will be executed during this line

@@ -164,7 +164,27 @@ figure {
   text-align: center;
 }
 
+.section-subtitle {
+  padding-bottom: 30px;
+}
+
+.section-copy {
+  padding-bottom: 50px;
+}
+
+.section-copy p {
+  margin-bottom: 20px;
+}
+
+.section-copy p:last-child {
+  margin-bottom: 0;
+}
+
 /* Featured Products */
+.section-featured-products {
+  padding: 0 0 50px;
+}
+
 .section-featured-products__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
