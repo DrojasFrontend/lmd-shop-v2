@@ -9,7 +9,15 @@
 
 <section class="section-hero">
   <div class="container">
-    <figure class="desktop"><img src="<?= $args->image_desktop ?>" alt=""></figure>
-    <figure class="mobile"><img src="<?= $args->image_mobile ?>" alt=""></figure>
+    <div class="desktop">
+      <figure>
+        <img src="<?= $args->image_desktop ?>" alt="">
+      </figure>
+    </div>
+    <div class="mobile">
+      <figure>
+        <img src="<?= $args->image_mobile ?>" alt="">
+      </figure>
+    </div>
   </div>
 </section>
