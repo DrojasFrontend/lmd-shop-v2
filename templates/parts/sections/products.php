@@ -30,7 +30,8 @@ $posts = $query->get_posts();
         $postId = $post->ID;
         $title = get_the_title($postId);
         $link = get_field('link', $postId);
-        $thumbnail = get_the_post_thumbnail($postId, 'medium'); 
+        $thumbnail = get_the_post_thumbnail($postId, 'medium', ['alt' => esc_attr($title)]);
+
       ?>
         <li>
           <a href="<?= $link ?>" target="_blank">
