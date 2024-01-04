@@ -62,7 +62,7 @@ $fields = get_fields();
     <h2><?= $title_prod_3; ?></h2>
   </div>
 </section>
-<?php get_template_part( 'templates/parts/sections/products', null, $product = "producto-2" ); ?>
+<?php get_template_part( 'templates/parts/sections/products', null, $product = "producto-3" ); ?>
 <section class="section-copy">
   <div class="container">
     <?= $copy_prod_3; ?>
