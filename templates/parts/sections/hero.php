@@ -11,12 +11,12 @@
   <div class="container">
     <div class="desktop">
       <figure>
-        <img src="<?= $args->image_desktop ?>" alt="">
+        <img src="<?= $args->image_desktop ?>" alt="" width="1160" height="337">
       </figure>
     </div>
     <div class="mobile">
       <figure>
-        <img src="<?= $args->image_mobile ?>" alt="">
+        <img src="<?= $args->image_mobile ?>" alt="" width="379" height="223">
       </figure>
     </div>
   </div>

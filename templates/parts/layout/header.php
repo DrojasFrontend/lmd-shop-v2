@@ -10,7 +10,7 @@ class MainNavWalker extends Walker_Nav_Menu {
           <?php echo $item->title ?>
           <?php if (isset($children_elements[$item->ID])) { ?>
             <span class="icon">
-              <img src="<?= IMG_BASE  ?>icon-chevron-down.svg" alt="icon chevron down">
+              <img src="<?= IMG_BASE  ?>icon-chevron-down.svg" alt="icon chevron down" width="30" height="29">
             </span>
           <?php } ?>
         </a>
@@ -54,7 +54,7 @@ class MainNavWalker extends Walker_Nav_Menu {
       </div>
       <div class="header__cart">
         <a href="">
-          <img src="<?= IMG_BASE  ?>icon-shopping-bag.svg" alt="icon cart">
+          <img src="<?= IMG_BASE  ?>icon-shopping-bag.svg" alt="icon cart" width="35" height="35">
         </a>
       </div>
     </div>
