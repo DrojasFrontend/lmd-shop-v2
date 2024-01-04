@@ -26,9 +26,20 @@
 
 /* Global */
 .container {
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Header */
@@ -114,4 +125,30 @@
 
 .header__cart a {
   display: block;
+}
+
+/* Hero */
+
+.section-hero {
+  padding: 20px 0 0 0;
+  text-align: center;
+  aspect-ratio: 4/3;
+}
+
+.section-hero .desktop {
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .section-hero {
+    padding: 50px 0 0 0;
+  }
+
+  .section-hero .desktop {
+    display: block;
+  }
+
+  .section-hero .mobile {
+    display: none;
+  }
 }

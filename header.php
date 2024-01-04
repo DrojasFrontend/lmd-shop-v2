@@ -7,8 +7,8 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package WordPress
- * @subpackage Amamantas_Shop
- * @since Amamantas Shop 1.0
+ * @subpackage LMD
+ * @since LMD Shop 1.0
  */
 
 ?>
