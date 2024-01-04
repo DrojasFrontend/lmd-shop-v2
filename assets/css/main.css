@@ -31,9 +31,25 @@
   padding: 0 20px;
 }
 
+h1 {
+  font: 600 normal 18px/1.4 "Montserrat", sans-serif;
+}
+
+h2 {
+  font: 400 normal 16px/1.4 "Montserrat", sans-serif;
+}
+
 @media only screen and (min-width: 1024px) {
   .container {
     max-width: 1200px;
+  }
+
+  h1 {
+    font: 600 normal 30px/1.4 "Montserrat", sans-serif;
+  }
+
+  h2 {
+    font: 400 normal 24px/1.4 "Montserrat", sans-serif;
   }
 }
 
@@ -54,15 +70,22 @@ figure {
 }
 
 .header__grid {
-  display: grid;
-  grid-template-columns: 90px 1fr 3fr 50px;
-  column-gap: 40px;
-  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+
+.header__logo {
+  text-align: center;
+  width: 100%;
+  order: 1;
 }
 
 .header__menu {
   display: flex;
-  column-gap: 40px;
+  column-gap: 10px;
+  width: 50%;
+  order: 3;
 }
 
 .menu__item {
@@ -72,15 +95,16 @@ figure {
 }
 
 .submenu {
+  font: 400 normal 12px/1.4 "Montserrat", sans-serif;
   position: absolute;
-  bottom: -74px;
+  top: 44px;
   left: 0;
   width: max-content;
-  padding: 20px;
+  padding: 10px;
   opacity: 0;
   visibility: hidden;
   transition: all 0.4s ease;
-  background-color: var(--color-primary);
+  background-color: #4e4d4dbf;
 }
 
 .submenu.active {
@@ -89,10 +113,13 @@ figure {
 }
 
 .submenu a {
+  display: block;
+  padding: 10px 0;
   color: var(--text-white);
 }
 
 .menu__item-link {
+  font: 600 normal 12px/1.4 "Montserrat", sans-serif;
   display: flex;
   align-items: center;
   width: 100%;
@@ -105,6 +132,38 @@ figure {
   display: block;
   width: 30px;
   height: 29px;
+}
+
+.header__search {
+  order: 2;
+  width: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+  .header__grid {
+    display: grid;
+    grid-template-columns: 90px 1fr 3fr 50px;
+    column-gap: 40px;
+    align-items: center;
+  }
+
+  .header__logo {
+    text-align: left;
+    width: auto;
+  }
+
+  .header__menu {
+    column-gap: 40px;
+    width: auto;
+  }
+
+  .menu__item-link {
+    font: 600 normal 14px/1.4 "Montserrat", sans-serif;
+  }
+
+  .header__search {
+    order: 3;
+  }
 }
 
 /* Search */
@@ -124,11 +183,19 @@ figure {
 }
 
 .header__cart {
-  width: 35px;
+  order: 3;
+  width: 50%;
+  text-align: right;
 }
 
 .header__cart a {
   display: block;
+}
+
+@media only screen and (min-width: 1024px) {
+  .header__cart {
+    width: 35px;
+  }
 }
 
 /* Hero */
@@ -136,11 +203,14 @@ figure {
 .section-hero {
   padding: 20px 0 0 0;
   text-align: center;
-  aspect-ratio: 4/3;
 }
 
 .section-hero .desktop {
   display: none;
+}
+
+.section-hero .mobile figure {
+  justify-content: center;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -160,7 +230,7 @@ figure {
 
 /* Title */
 .section-title {
-  padding: 50px 0;
+  padding: 30px 0;
   text-align: center;
 }
 
@@ -169,15 +239,31 @@ figure {
 }
 
 .section-copy {
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
 
 .section-copy p {
+  font-size: 14px;
+  text-align: justify;
   margin-bottom: 20px;
 }
 
 .section-copy p:last-child {
   margin-bottom: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  .section-title {
+    padding: 50px 0;
+  }
+
+  .section-copy {
+    padding-bottom: 50px;
+  }
+
+  .section-copy p {
+    font-size: 16px;
+  }
 }
 
 /* Featured Products */
@@ -187,7 +273,7 @@ figure {
 
 .section-featured-products__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   column-gap: 10px;
 }
 
@@ -197,7 +283,7 @@ figure {
 
 .section-featured-products__grid figure {
   padding: 20px;
-  box-shadow: 0 2px 40px 0 rgba(0,0,0,0.07);
+  box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.07);
 }
 
 .section-featured-products__grid a {
@@ -207,4 +293,15 @@ figure {
 .section-featured-products__grid a p {
   text-align: center;
   padding: 10px;
+  font-size: 12px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .section-featured-products__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .section-featured-products__grid a p {
+    font-size: 16px;
+  }
 }

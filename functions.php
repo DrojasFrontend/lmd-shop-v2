@@ -82,4 +82,6 @@ function my_acf_json_save_point( $path ) {
 }
 add_filter( 'acf/settings/save_json', 'my_acf_json_save_point' );
 
+add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+
 ?>
