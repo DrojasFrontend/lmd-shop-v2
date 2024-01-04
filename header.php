@@ -21,7 +21,7 @@
 	<title><?php wp_title('|', true, 'right'); ?></title>
 </head>
 
-<body>
+<body class="body">
 	<div id="page" class="site">
 
 		<?php get_template_part( 'templates/parts/layout/header' ); ?>

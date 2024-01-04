@@ -18,7 +18,7 @@
   --text-white: var(--color-white);
 }
 
-body {
+.body {
   font-family: "Montserrat", sans-serif;
   color: var(--text);
 }
@@ -44,7 +44,7 @@ body {
   align-items: center;
 }
 
-.menu {
+.header__menu {
   display: flex;
   column-gap: 40px;
 }
@@ -90,10 +90,10 @@ body {
   height: 29px;
 }
 
-.cart {
+.header__cart {
   width: 35px;
 }
 
-.cart a {
+.header__cart a {
   display: block;
 }

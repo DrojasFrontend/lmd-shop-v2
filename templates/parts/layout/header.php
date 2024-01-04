@@ -32,14 +32,14 @@ class MainNavWalker extends Walker_Nav_Menu {
 <header class="header">
   <div class="container">
     <div class="header__grid">
-      <div class="logo">
+      <div class="header__logo">
         <?php 
           $custom_logo_id = get_theme_mod( 'custom_logo' );
           $custom_logo_url = wp_get_attachment_image_url( $custom_logo_id , 'full' );
           echo '<img src="' . esc_url( $custom_logo_url ) . '" alt="">';
         ?>
       </div>
-      <div class="menu">
+      <div class="header__menu">
         <?php
           wp_nav_menu([
             'theme_location' => 'main-menu',
@@ -49,10 +49,10 @@ class MainNavWalker extends Walker_Nav_Menu {
           ]);
         ?>
       </div>
-      <div class="search">
+      <div class="header__search">
         Buscar
       </div>
-      <div class="cart">
+      <div class="header__cart">
         <a href="">
           <img src="<?= IMG_BASE  ?>icon-shopping-bag.svg" alt="icon cart">
         </a>
