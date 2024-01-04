@@ -21,6 +21,7 @@
 .body {
   font-family: "Montserrat", sans-serif;
   color: var(--text);
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Global */
@@ -39,7 +40,7 @@
 
 .header__grid {
   display: grid;
-  grid-template-columns: 90px 1fr 1fr 50px;
+  grid-template-columns: 90px 1fr 3fr 50px;
   column-gap: 40px;
   align-items: center;
 }
@@ -82,12 +83,29 @@
   width: 100%;
   height: 100%;
   color: var(--text-white);
+  font-weight: 800;
 }
 
 .menu__item-link .icon {
   display: block;
   width: 30px;
   height: 29px;
+}
+
+/* Search */
+.body .is-form-style {
+  border-radius: 100px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.body .is-form-style input {
+  background: #fff0 !important;
+}
+
+.body .is-form-style input.is-search-input,
+.body .is-search-icon {
+  border: 0 !important;
 }
 
 .header__cart {

@@ -50,7 +50,7 @@ class MainNavWalker extends Walker_Nav_Menu {
         ?>
       </div>
       <div class="header__search">
-        Buscar
+        <?= do_shortcode('[ivory-search id="16" title="AJAX Search Form for WooCommerce"]'); ?>
       </div>
       <div class="header__cart">
         <a href="">
