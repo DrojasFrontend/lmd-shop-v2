@@ -21,7 +21,11 @@ $fields = get_fields();
   $title_prod_3 = get_field("title_prod_3");
   $copy_prod_3 = get_field("copy_prod_3");
 
-  
+
+  $content_copy = get_field("content_copy");
+  $content_img = get_field("content_img");  
+  $content_copy_2 = get_field("content_copy_2");
+  $content_img_2 = get_field("content_img_2");  
 ?>
 
 <?php get_template_part( 'templates/parts/sections/hero', null, $hero ); ?>
@@ -66,6 +70,33 @@ $fields = get_fields();
 <section class="section-copy">
   <div class="container">
     <?= $copy_prod_3; ?>
+  </div>
+</section>
+
+<section class="content">
+  <div class="container">
+    <div class="content__grid">
+      <div class="content__text">
+        <?= $content_copy ?>
+      </div>
+      <figure>
+        <img src="<?= $content_img ?>" alt="Marcas de Prestigio a tu Alcance" width="501" height="478">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="content">
+  <div class="container">
+    <div class="content__grid reverse">
+      <figure>
+        <img src="<?= $content_img_2 ?>" alt="Envío a Todo Colombia" width="501" height="478">
+      </figure>
+
+      <div class="content__text">
+        <?= $content_copy_2 ?>
+      </div>
+    </div>
   </div>
 </section>
 

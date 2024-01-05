@@ -5,6 +5,27 @@ define('IMG_BASE', URL_BASE . 'assets/images/');
 
 add_theme_support( 'custom-logo' );
 
+// Add Logo Secundary
+function logo_secondary($wp_customize) {
+	$wp_customize->add_section('logo_secondary', array(
+		'title'    => __('Logo secundario', 'lmd-shop'),
+		'priority' => 30,
+	));
+
+	$wp_customize->add_setting('logo_secondary', array(
+		'default' => '',
+		'transport' => 'refresh',
+	));
+
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'logo_secondary', array(
+		'label'    => __('Logo secundario', 'lmd-shop'),
+		'section'  => 'logo_secondary',
+		'settings' => 'logo_secondary',
+	)));
+}
+
+add_action('customize_register', 'logo_secondary');
+
 register_nav_menus(
   array(
     'main-menu' => _( 'Menu principal' ),
@@ -83,5 +104,6 @@ function my_acf_json_save_point( $path ) {
 add_filter( 'acf/settings/save_json', 'my_acf_json_save_point' );
 
 add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+
 
 ?>

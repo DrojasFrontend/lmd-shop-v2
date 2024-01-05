@@ -2,11 +2,9 @@
   <div class="container">
     <div class="footer__grid">
       <div class="footer__location">
-        <?php 
-          $custom_logo_id = get_theme_mod( 'custom_logo' );
-          $custom_logo_url = wp_get_attachment_image_url( $custom_logo_id , 'full' );
-          echo '<img src="' . esc_url( $custom_logo_url ) . '" alt="">';
-        ?>
+        <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+          <img src="<?php echo esc_url(get_theme_mod('logo_secondary')); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>">
+        </a>
         <p>
           Localización <br>
           Bogotá Colombia, Zona franca
