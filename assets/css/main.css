@@ -739,6 +739,16 @@ figure {
   color: var(--text);
 }
 
+.custom-single-product .shop_attributes {
+  font: 400 normal 14px/1.4 "Montserrat", sans-serif;
+  text-align: left;
+}
+
+.custom-single-product .woocommerce-product-attributes-item__label {
+  font: 400 normal 14px/1.4 "Montserrat", sans-serif;
+  padding-right: 20px;
+}
+
 @media only screen and (min-width: 1024px) {
   .custom-single-product {
     padding: 100px 0;
@@ -766,7 +776,7 @@ figure {
   }
 
   .custom-single-product .woocommerce-tabs {
-    padding: 10px;
+    padding: 30px;
     margin-top: 50px;
   }
 
@@ -777,5 +787,10 @@ figure {
   .custom-single-product .woocommerce-tabs .wc-tabs li a {
     font: 600 normal 12px/1.4 "Montserrat", sans-serif;
     padding: 20px;
+  }
+
+  .custom-single-product .woocommerce-product-attributes-item__label,
+  .custom-single-product .shop_attributes {
+    font: 400 normal 16px/1.4 "Montserrat", sans-serif;
   }
 }
