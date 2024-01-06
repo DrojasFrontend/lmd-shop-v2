@@ -10,18 +10,22 @@ get_header();
       </header>
     <?php endif; ?>
 
-    <ul class="custom-category-product__grid">
+    <div class="custom-category-product__grid">
       <?php
         if ( have_posts() ) {
           while ( have_posts() ) {
             the_post();
+            echo '<div class="custom-category-product__product">';
             wc_get_template_part( 'content', 'product' );
+            echo '<a href="' . esc_url(get_permalink()) . '" class="custom-category-product__cta">Ver Producto</a>';
+            echo '</div>';
+
           }
         } else {
           do_action( 'woocommerce_no_products_found' );
         }
       ?>
-    </ul>
+    </div>
     <?php
       /**
        * Hook: woocommerce_after_shop_loop.

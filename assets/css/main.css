@@ -469,34 +469,22 @@ figure {
   gap: 10px;
 }
 
-.custom-category-product li.product {
+.custom-category-product .custom-category-product__product {
   position: relative;
-  padding: 10px;
-  border: 1px solid #4e4d4d1c;
+  padding: 15px;
+  border: 1px solid #4e4d4d03;
   list-style: none;
+  box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.07);
 }
 
-.custom-category-product li.product a {
-  display: block;
-}
-
-.custom-category-product li.product img {
+.custom-category-product .custom-category-product__product img {
   display: flex;
   justify-content: center;
   margin: 0 auto;
 }
 
 .custom-category-product .onsale {
-  font: 600 normal 12px/1.4 "Montserrat", sans-serif;
-  display: flex;
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  width: max-content;
-  padding: 5px 10px;
-  color: var(--text-white);
-  text-transform: uppercase;
-  background-color: var(--bckg-primary);
+  display: none;
 }
 
 .custom-category-product .woocommerce-loop-product__title {
@@ -521,15 +509,25 @@ figure {
 }
 
 .custom-category-product .add_to_cart_button {
+  display: none;
   font-size: 0;
-  display: block;
   width: 45px;
   height: 45px;
   border: 1px solid #4e4d4d1c;
-  background: url(/wp-content/themes/lmd-shop-v2/assets/images/icon-shopping-cart.svg);
+  background: url(/wp-content/themes/lmd-shop-v2/assets/images/icon-shopping-cart.png);
   background-size: 35px;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.custom-category-product__cta {
+  font: 800 normal 10px/1.4 "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 8px 10px;
+  text-transform: uppercase;
+  color: var(--text-white);
+  background-color: var(--bckg-primary);
 }
 
 .custom-category-product .woocommerce-pagination {
@@ -574,6 +572,10 @@ figure {
     padding-bottom: 50px;
   }
 
+  .custom-category-product .custom-category-product__product {
+    padding: 30px;
+  }
+
   .custom-category-product .page-numbers {
     font: 400 normal 16px/1.4 "Montserrat", sans-serif;
     column-gap: 10px;
@@ -584,10 +586,6 @@ figure {
     height: 40px;
   }
 
-  .custom-category-product li.product {
-    padding: 30px;
-  }
-
   .custom-category-product__grid {
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
@@ -595,6 +593,11 @@ figure {
 
   .custom-category-product .woocommerce-loop-product__title {
     font: 400 normal 14px/1.4 "Montserrat", sans-serif;
+  }
+
+  .custom-category-product__cta {
+    font: 800 normal 14px/1.4 "Montserrat", sans-serif;
+    padding: 10px 20px;
   }
 
   .custom-category-product a.page-numbers {
