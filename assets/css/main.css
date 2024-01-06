@@ -607,3 +607,175 @@ figure {
     color: inherit;
   }
 }
+
+/* Single product */
+.custom-single-product {
+  padding: 50px 0;
+}
+
+.woocommerce-breadcrumb,
+.custom-single-product .onsale {
+  display: none;
+}
+
+.custom-single-product .woocommerce-product-gallery__image {
+  text-align: center;
+}
+
+.custom-single-product .woocommerce-product-gallery,
+.custom-single-product .summary {
+  width: 100%;
+}
+
+.custom-single-product .summary {
+  padding-top: 50px;
+}
+
+.custom-single-product .price {
+  display: block;
+  padding-bottom: 15px;
+  color: var(--text);
+}
+
+.custom-single-product .price del {
+  font: 400 normal 12px/1.4 "Montserrat", sans-serif;
+  text-decoration: line-through;
+}
+
+.custom-single-product .price ins {
+  font: 400 normal 18px/1.4 "Montserrat", sans-serif;
+}
+
+.custom-single-product .woocommerce-product-details__short-description {
+  font: 400 normal 14px/1.4 "Montserrat", sans-serif;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.custom-single-product .screen-reader-text {
+  display: none;
+}
+
+.custom-single-product .cart {
+  display: flex;
+  column-gap: 10px;
+}
+
+.custom-single-product .quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 40px;
+  border-radius: 17px;
+}
+
+.custom-single-product .quantity input {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border-radius: 0px;
+  border: 1px solid;
+}
+
+.custom-single-product .single_add_to_cart_button {
+  font: 600 normal 14px/1.4 "Montserrat", sans-serif;
+  background: #000;
+  color: #fff;
+  border: 0;
+  padding: 0 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.custom-single-product .woocommerce-tabs .wc-tabs {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+.custom-single-product .woocommerce-tabs .wc-tabs li {
+  display: flex;
+  border: 1px solid #4e4d4d1c;
+  list-style: none;
+}
+
+.custom-single-product .woocommerce-tabs {
+  width: 100%;
+  padding: 10px;
+  margin-top: 30px;
+  border: 1px solid #4e4d4d1c;
+}
+
+.custom-single-product .woocommerce-tabs .wc-tabs li.active a {
+  border: 0;
+  color: var(--color-white);
+  background: var(--bckg-primary);
+}
+
+.custom-single-product .woocommerce-tabs .wc-tabs li a {
+  font: 600 normal 9px/1.4 "Montserrat", sans-serif;
+  padding: 13px;
+  color: var(--text);
+  text-transform: uppercase;
+  background: var(--bckg-white);
+}
+
+.custom-single-product .woocommerce-Tabs-panel {
+  padding-top: 30px;
+}
+
+.custom-single-product .woocommerce-Tabs-panel > h2 {
+  display: none;
+}
+
+.custom-single-product .woocommerce-Tabs-panel p {
+  font: 400 normal 14px/1.4 "Montserrat", sans-serif;
+  text-align: justify;
+}
+
+.custom-single-product .woocommerce-Tabs-panel p a {
+  color: var(--text);
+}
+
+@media only screen and (min-width: 1024px) {
+  .custom-single-product {
+    padding: 100px 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .custom-single-product .custom-single-product__grid .product {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+  }
+
+  .custom-single-product .woocommerce-Tabs-panel p {
+    font: 400 normal 16px/1.4 "Montserrat", sans-serif;
+  }
+
+  .custom-single-product .woocommerce-product-gallery,
+  .custom-single-product .summary {
+    width: 45%;
+  }
+
+  .custom-single-product .summary {
+    padding-top: 50px;
+  }
+
+  .custom-single-product .woocommerce-tabs {
+    padding: 10px;
+    margin-top: 50px;
+  }
+
+  .custom-single-product .woocommerce-Tabs-panel {
+    padding-top: 50px;
+  }
+
+  .custom-single-product .woocommerce-tabs .wc-tabs li a {
+    font: 600 normal 12px/1.4 "Montserrat", sans-serif;
+    padding: 20px;
+  }
+}

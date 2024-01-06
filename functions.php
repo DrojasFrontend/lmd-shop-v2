@@ -105,6 +105,18 @@ add_filter( 'acf/settings/save_json', 'my_acf_json_save_point' );
 
 add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
-add_theme_support( 'woocommerce' )
+/* Woocommerce */
+add_theme_support( 'woocommerce' );
+
+function custom_single_product_div() {
+	echo '<div class="custom-single-product"> <div class="container"> <div class="custom-single-product__grid"> ';
+}
+add_action('woocommerce_before_single_product', 'custom_single_product_div', 10);
+
+remove_action( 'woocommerce_product_thumbnails', 'woocommerce_show_product_thumbnails', 20 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+
 
 ?>
