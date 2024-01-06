@@ -452,3 +452,155 @@ figure {
     font: 400 normal 14px/1.4 "Montserrat", sans-serif;
   }
 }
+
+/* Category product */
+.woocommerce-products-header__title {
+  font: 400 normal 16px/1.4 "Montserrat", sans-serif;
+  padding-bottom: 30px;
+}
+
+.custom-category-product {
+  padding: 50px 0;
+}
+
+.custom-category-product__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.custom-category-product li.product {
+  position: relative;
+  padding: 10px;
+  border: 1px solid #4e4d4d1c;
+  list-style: none;
+}
+
+.custom-category-product li.product a {
+  display: block;
+}
+
+.custom-category-product li.product img {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.custom-category-product .onsale {
+  font: 600 normal 12px/1.4 "Montserrat", sans-serif;
+  display: flex;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: max-content;
+  padding: 5px 10px;
+  color: var(--text-white);
+  text-transform: uppercase;
+  background-color: var(--bckg-primary);
+}
+
+.custom-category-product .woocommerce-loop-product__title {
+  font: 400 normal 12px/1.4 "Montserrat", sans-serif;
+  padding: 20px 0 10px;
+  color: var(--text);
+}
+
+.custom-category-product .price {
+  display: block;
+  padding-bottom: 15px;
+  color: var(--text);
+}
+
+.custom-category-product .price del {
+  font: 400 normal 12px/1.4 "Montserrat", sans-serif;
+  text-decoration: line-through;
+}
+
+.custom-category-product .price ins {
+  font: 400 normal 18px/1.4 "Montserrat", sans-serif;
+}
+
+.custom-category-product .add_to_cart_button {
+  font-size: 0;
+  display: block;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #4e4d4d1c;
+  background: url(/wp-content/themes/lmd-shop-v2/assets/images/icon-shopping-cart.svg);
+  background-size: 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.custom-category-product .woocommerce-pagination {
+  padding: 50px 0 0;
+}
+
+.custom-category-product .page-numbers {
+  font: 400 normal 12px/1.4 "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  column-gap: 5px;
+}
+
+.custom-category-product .page-numbers li {
+  list-style: none;
+}
+
+.custom-category-product .page-numbers.current {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #4e4d4d1c;
+  width: 30px;
+  height: 30px;
+  color: var(--text-white);
+  background: var(--bckg-primary);
+}
+
+.custom-category-product a.page-numbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  width: 30px;
+  height: 30px;
+  color: inherit;
+}
+
+@media only screen and (min-width: 1024px) {
+  .woocommerce-products-header__title {
+    font: 400 normal 24px/1.4 "Montserrat", sans-serif;
+    padding-bottom: 50px;
+  }
+
+  .custom-category-product .page-numbers {
+    font: 400 normal 16px/1.4 "Montserrat", sans-serif;
+    column-gap: 10px;
+  }
+
+  .custom-category-product .page-numbers.current {
+    width: 40px;
+    height: 40px;
+  }
+
+  .custom-category-product li.product {
+    padding: 30px;
+  }
+
+  .custom-category-product__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+
+  .custom-category-product .woocommerce-loop-product__title {
+    font: 400 normal 14px/1.4 "Montserrat", sans-serif;
+  }
+
+  .custom-category-product a.page-numbers {
+    border: 1px solid;
+    width: 40px;
+    height: 40px;
+    color: inherit;
+  }
+}
