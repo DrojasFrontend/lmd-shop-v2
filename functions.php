@@ -117,6 +117,12 @@ remove_action( 'woocommerce_product_thumbnails', 'woocommerce_show_product_thumb
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+add_filter( 'woocommerce_product_tabs', 'my_remove_product_tabs', 98 );
+ 
+function my_remove_product_tabs( $tabs ) {
+  unset( $tabs['additional_information'] ); // To remove the additional information tab
+  return $tabs;
+}
 
 
 ?>
