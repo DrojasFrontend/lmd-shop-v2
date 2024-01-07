@@ -33,8 +33,12 @@ register_nav_menus(
   )
 );
 
-wp_enqueue_style( 'fonts', get_template_directory_uri() . '/assets/fonts/fonts.css', false, '1.1', 'all');
-wp_enqueue_style( 'main', get_template_directory_uri() . '/assets/css/main.css', false, '1.1', 'all');
+function enqueue_custom_styles()
+{
+	wp_enqueue_style('fonts', get_template_directory_uri() . '/assets/fonts/fonts.css', false, '1.1', 'all');
+	wp_enqueue_style('main', get_template_directory_uri() . '/assets/css/main.css', false, '1.1', 'all');
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
 
 // Remove the admin bar for non-admin users
 function remove_admin_bar() {
